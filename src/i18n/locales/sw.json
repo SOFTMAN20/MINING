@@ -1,0 +1,179 @@
+
+{
+  "navigation": {
+    "home": "Nyumbani",
+    "about": "Kuhusu Sisi",
+    "services": "Huduma Zetu",
+    "products": "Bidhaa",
+    "contact": "Wasiliana Nasi"
+  },
+  "hero": {
+    "title": "KAMPUNI YA HDA",
+    "subtitle": "LIMITED",
+    "description": "Kampuni Kuu ya Vichombo vya Migodi Tanzania",
+    "tagline": "Mtaalamu katika Vichombo vya Migodi, Huduma za Kupasua na Ushauri",
+    "ourServices": "Huduma Zetu",
+    "getConsultation": "Pata Ushauri"
+  },
+  "services": {
+    "title": "Huduma Zetu",
+    "subtitle": "Suluhisho kamili za vichombo na huduma za kupasua zilizobinafsishwa kulingana na mahitaji yako maalum",
+    "coreServices": "Huduma Kuu",
+    "additionalServices": "Huduma za Ziada",
+    "ourProcess": "Mchakato Wetu",
+    "readyToStart": "Uko Tayari Kuanza?",
+    "requestConsultation": "Omba Ushauri",
+    "explosiveProducts": {
+      "title": "Usambazaji wa Bidhaa za Vichombo",
+      "description": "Bidhaa za vichombo za ubora wa juu kwa matumizi mbalimbali",
+      "features": {
+        "anfo": "Vichombo vya ANFO",
+        "emulsion": "Vichombo vya Emulsion",
+        "detonators": "Vichombo vya Kuwasha na Kuongeza",
+        "safety": "Vifaa vya Usalama",
+        "international": "Mlolongo wa Usambazaji wa Kimataifa"
+      }
+    },
+    "blastingServices": {
+      "title": "Huduma za Kupasua kwa Kitaalamu",
+      "description": "Shughuli za kupasua za kitaalamu na usahihi na usalama",
+      "features": {
+        "demolition": "Kubomoa kwa Udhibiti",
+        "excavation": "Kuchimba Miamba",
+        "quarry": "Shughuli za Quarry",
+        "preparation": "Kuandaa Tovuti",
+        "custom": "Suluhisho za Kupasua Maalum"
+      }
+    },
+    "consultancy": {
+      "title": "Ushauri wa Kupasua",
+      "description": "Ushauri wa kitaalamu na huduma za mafunzo",
+      "features": {
+        "design": "Muundo na Mipango ya Kupasua",
+        "safety": "Tathmini za Usalama",
+        "training": "Mipango ya Mafunzo",
+        "support": "Msaada wa Kiufundi",
+        "compliance": "Kufuata Sheria"
+      }
+    },
+    "additional": {
+      "equipment": {
+        "title": "Matengenezo ya Vifaa",
+        "description": "Huduma za matengenezo ya kitaalamu kwa vifaa vya kupasua"
+      },
+      "safetyTraining": {
+        "title": "Mafunzo ya Usalama",
+        "description": "Mipango ya mafunzo ya kina ya usalama kwa wafanyakazi"
+      },
+      "technicalSupport": {
+        "title": "Msaada wa Kiufundi",
+        "description": "Msaada wa kiufundi wa saa 24/7 na mwitikio wa dharura"
+      },
+      "emergency": {
+        "title": "Huduma za Dharura",
+        "description": "Mwitikio wa haraka kwa mahitaji ya haraka ya kupasua"
+      }
+    },
+    "process": {
+      "consultation": {
+        "title": "Ushauri",
+        "description": "Tathmini ya awali na uchambuzi wa mahitaji"
+      },
+      "planning": {
+        "title": "Mipango",
+        "description": "Mipango ya kina ya mradi na muundo"
+      },
+      "execution": {
+        "title": "Utekelezaji",
+        "description": "Utekelezaji salama na ufanisi wa mradi"
+      },
+      "support": {
+        "title": "Msaada",
+        "description": "Msaada unaoendelea na matengenezo"
+      }
+    }
+  },
+  "products": {
+    "title": "Bidhaa Zetu",
+    "subtitle": "Bidhaa za vichombo vya migodi za ubora wa juu zinazofaa kwa hali zote za hewa",
+    "whyChoose": "Kwa Nini Uchague Bidhaa Zetu",
+    "needInfo": "Unahitaji Maelezo ya Bidhaa?",
+    "requestCatalog": "Omba Katalogi ya Bidhaa",
+    "features": {
+      "weatherResistant": {
+        "title": "Zinazostahimili Hewa",
+        "description": "Zinafaa kwa hali zote za hewa - mvua au kiangazi"
+      },
+      "safetyCertified": {
+        "title": "Zilizothibitishwa Usalama",
+        "description": "Bidhaa zote zinakidhi viwango vya usalama vya kimataifa"
+      },
+      "eastAfricaCoverage": {
+        "title": "Ufikaji wa Afrika Mashariki",
+        "description": "Kutumikia wachimbaji wa kiwango cha chini hadi cha juu"
+      },
+      "customSolutions": {
+        "title": "Suluhisho Maalum",
+        "description": "Bidhaa zinazoweza kubinafsishwa na muda wa uongozaji unaofaa"
+      }
+    }
+  },
+  "contact": {
+    "title": "Wasiliana Nasi",
+    "subtitle": "Wasiliana na wataalamu wetu kwa mahitaji yako yote ya suluhisho za vichombo vya migodi",
+    "getInTouch": "Wasiliana Nasi",
+    "sendMessage": "Tutumie Ujumbe",
+    "visitLocation": "Tembelea Mahali Petu",
+    "findUs": "Tutafute Mbeya, Tanzania",
+    "mobile": "Simu ya Mkononi",
+    "email": "Barua Pepe",
+    "physicalAddress": "Anwani ya Kimwili",
+    "postalAddress": "Anwani ya Posta",
+    "companyInfo": "Maelezo ya Kampuni",
+    "whatsappDescription": "Bofya kuzungumza kwenye WhatsApp - Tunapatikana kwa mahitaji yako yote ya vichombo vya migodi",
+    "emailDescription": "Tutajibu ndani ya masaa 24",
+    "visitDescription": "Tembelea makao makuu yetu",
+    "correspondenceDescription": "Kwa maandishi",
+    "form": {
+      "firstName": "Jina la Kwanza",
+      "lastName": "Jina la Mwisho",
+      "email": "Barua Pepe",
+      "phone": "Simu",
+      "subject": "Mada",
+      "message": "Ujumbe",
+      "send": "Tuma Ujumbe",
+      "firstNamePlaceholder": "Juma",
+      "lastNamePlaceholder": "Mwalimu",
+      "emailPlaceholder": "juma@mfano.com",
+      "phonePlaceholder": "+255 XXX XXX XXX",
+      "subjectPlaceholder": "Hoja za vichombo vya migodi",
+      "messagePlaceholder": "Tuambie kuhusu mahitaji ya mradi wako wa migodi..."
+    }
+  },
+  "footer": {
+    "description": "Mshirika wako wa kuaminika kwa suluhisho za vichombo vya migodi Tanzania.",
+    "contactUs": "Wasiliana Nasi",
+    "quickLinks": "Viungo vya Haraka",
+    "copyright": "© 2024 HDA Company Limited. Haki zote zimehifadhiwa. Inamilikiwa na Watanzania katika Jamhuri ya Muungano wa Tanzania."
+  },
+  "about": {
+    "title": "Kuhusu HDA Company Limited",
+    "leadership": "Uongozi Wetu",
+    "whyChoose": "Kwa Nini Uchague HDA Company?",
+    "getStarted": "Uko Tayari Kuanza?",
+    "contactExperts": "Wasiliana nasi leo kujadili mahitaji yako ya kupasua na kupata suluhisho maalum"
+  },
+  "stats": {
+    "expertTeam": "Wanachama wa Timu ya Utaalamu",
+    "successfulProjects": "Miradi ya Mafanikio",
+    "yearsExperience": "Miaka ya Uzoefu",
+    "safetyRecord": "Rekodi ya Usalama"
+  },
+  "common": {
+    "learnMore": "Jifunze Zaidi",
+    "viewAll": "Angalia Zote",
+    "readMore": "Soma Zaidi",
+    "getQuote": "Pata Bei",
+    "contactNow": "Wasiliana Sasa"
+  }
+}

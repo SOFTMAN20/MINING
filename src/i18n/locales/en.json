@@ -1,0 +1,179 @@
+
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Our Services",
+    "products": "Products",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "HDA COMPANY LIMITED",
+    "subtitle": "Mining & Explosives Company",
+    "description": "Tanzania's first Premiers Mining & Explosives Company",
+    "tagline": "Specialized in Mining Explosives, Blasting Services & Consultancy",
+    "ourServices": "Our Services",
+    "getConsultation": "Get Consultation"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive explosive solutions and blasting services tailored to your specific needs",
+    "coreServices": "Core Services",
+    "additionalServices": "Additional Services",
+    "ourProcess": "Our Process",
+    "readyToStart": "Ready to Get Started?",
+    "requestConsultation": "Request Consultation",
+    "explosiveProducts": {
+      "title": "Explosive Products Supply",
+      "description": "High-quality explosive products for various applications",
+      "features": {
+        "anfo": "ANFO Explosives",
+        "emulsion": "Emulsion Explosives",
+        "detonators": "Detonators & Boosters",
+        "safety": "Safety Equipment",
+        "international": "International Supply Chain"
+      }
+    },
+    "blastingServices": {
+      "title": "Professional Blasting Services",
+      "description": "Expert blasting operations with precision and safety",
+      "features": {
+        "demolition": "Controlled Demolition",
+        "excavation": "Rock Excavation",
+        "quarry": "Quarry Operations",
+        "preparation": "Site Preparation",
+        "custom": "Custom Blasting Solutions"
+      }
+    },
+    "consultancy": {
+      "title": "Blasting Consultancy",
+      "description": "Expert consultation and training services",
+      "features": {
+        "design": "Blast Design & Planning",
+        "safety": "Safety Assessments",
+        "training": "Training Programs",
+        "support": "Technical Support",
+        "compliance": "Regulatory Compliance"
+      }
+    },
+    "additional": {
+      "equipment": {
+        "title": "Equipment Maintenance",
+        "description": "Professional maintenance services for blasting equipment"
+      },
+      "safetyTraining": {
+        "title": "Safety Training",
+        "description": "Comprehensive safety training programs for personnel"
+      },
+      "technicalSupport": {
+        "title": "Technical Support",
+        "description": "24/7 technical support and emergency response"
+      },
+      "emergency": {
+        "title": "Emergency Services",
+        "description": "Rapid response for urgent blasting requirements"
+      }
+    },
+    "process": {
+      "consultation": {
+        "title": "Consultation",
+        "description": "Initial assessment and requirement analysis"
+      },
+      "planning": {
+        "title": "Planning",
+        "description": "Detailed project planning and design"
+      },
+      "execution": {
+        "title": "Execution",
+        "description": "Safe and efficient project execution"
+      },
+      "support": {
+        "title": "Support",
+        "description": "Ongoing support and maintenance"
+      }
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Premium mining explosive products suitable for all weather conditions",
+    "whyChoose": "Why Choose Our Products",
+    "needInfo": "Need Product Information?",
+    "requestCatalog": "Request Product Catalog",
+    "features": {
+      "weatherResistant": {
+        "title": "Weather Resistant",
+        "description": "Suitable for all weather conditions - rainy or dry"
+      },
+      "safetyCertified": {
+        "title": "Safety Certified",
+        "description": "All products meet international safety standards"
+      },
+      "eastAfricaCoverage": {
+        "title": "East Africa Coverage",
+        "description": "Serving small-scale to large-scale miners"
+      },
+      "customSolutions": {
+        "title": "Custom Solutions",
+        "description": "Customizable products with reasonable lead times"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our experts for all your mining explosive solutions needs",
+    "getInTouch": "Get In Touch",
+    "sendMessage": "Send us a Message",
+    "visitLocation": "Visit Our Location",
+    "findUs": "Find us in Mbeya, Tanzania",
+    "mobile": "Mobile",
+    "email": "Email",
+    "physicalAddress": "Physical Address",
+    "postalAddress": "Postal Address",
+    "companyInfo": "Company Information",
+    "whatsappDescription": "Click to chat on WhatsApp - Available for all your mining explosive needs",
+    "emailDescription": "We'll respond within 24 hours",
+    "visitDescription": "Visit our headquarters",
+    "correspondenceDescription": "For correspondence",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "firstNamePlaceholder": "John",
+      "lastNamePlaceholder": "Doe",
+      "emailPlaceholder": "john@example.com",
+      "phonePlaceholder": "+255 XXX XXX XXX",
+      "subjectPlaceholder": "Mining explosive inquiry",
+      "messagePlaceholder": "Tell us about your mining project requirements..."
+    }
+  },
+  "footer": {
+    "description": "Your trusted partner for mining explosive solutions in Tanzania.",
+    "contactUs": "Contact Us",
+    "quickLinks": "Quick Links",
+    "copyright": "© 2024 HDA Company Limited. All rights reserved. Owned by Tanzanians in the United Republic of Tanzania."
+  },
+  "about": {
+    "title": "About HDA Company Limited",
+    "leadership": "Our Leadership",
+    "whyChoose": "Why Choose HDA Company?",
+    "getStarted": "Ready to Get Started?",
+    "contactExperts": "Contact us today to discuss your blasting requirements and get a customized solution"
+  },
+  "stats": {
+    "expertTeam": "Expert Team Members",
+    "successfulProjects": "Successful Projects",
+    "yearsExperience": "Years Experience",
+    "safetyRecord": "Safety Record"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "getQuote": "Get Quote",
+    "contactNow": "Contact Now"
+  }
+}
