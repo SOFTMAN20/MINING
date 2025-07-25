@@ -19,7 +19,7 @@ const Products = () => {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/85"></div>
-        <div className="absolute inset-0 bg-[url('images/products.png')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/images/products.png')] bg-cover bg-center"></div>
         
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.h1
