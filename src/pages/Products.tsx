@@ -7,6 +7,13 @@ import { useTranslation } from "react-i18next";
 const Products = () => {
   const { t } = useTranslation();
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "255753392262";
+    const message = "Hello, I would like to request the product catalog for your mining explosive solutions.";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">
       {/* Hero Section */}
@@ -267,6 +274,7 @@ const Products = () => {
             <Button 
               size="lg" 
               className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg"
+              onClick={handleWhatsAppClick}
             >
               Request Product Catalog
             </Button>

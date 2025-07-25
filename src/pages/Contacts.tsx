@@ -235,13 +235,17 @@ const Contacts = () => {
             transition={{ duration: 0.8 }}
             className="bg-slate-800 p-4 rounded-lg"
           >
-            <div className="bg-slate-600 h-96 rounded-lg flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <MapPin className="h-16 w-16 mx-auto mb-4" />
-                <p className="text-lg">Interactive Map Coming Soon</p>
-                <p className="text-sm">Street: Maendeleo, Ward: Iyunga, Mbeya</p>
-                <p className="text-sm">Jasma Cash & Carry building</p>
-              </div>
+            <div className="bg-slate-600 h-96 rounded-lg flex items-center justify-center overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6628.239874767934!2d33.43705395207903!3d-8.956016011272013!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stz!4v1753400457114!5m2!1sen!2stz"
+                width="100%"
+                height="100%"
+                style={{ border: 0, borderRadius: '0.5rem', minHeight: '24rem', minWidth: '100%' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map Location"
+              ></iframe>
             </div>
           </motion.div>
         </div>
