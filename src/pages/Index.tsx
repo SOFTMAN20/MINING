@@ -195,7 +195,7 @@ const Index = () => {
             {[
               { icon: Users, number: "50+", label: t('stats.expertTeam') },
               { icon: Award, number: "200+", label: t('stats.successfulProjects') },
-              { icon: Clock, number: "15+", label: t('stats.yearsExperience') },
+              { icon: Clock, number: "3+", label: t('stats.yearsExperience') },
               { icon: Shield, number: "100%", label: t('stats.safetyRecord') }
             ].map((stat, index) => (
               <motion.div
