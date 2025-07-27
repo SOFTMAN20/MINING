@@ -430,7 +430,7 @@ const Index = () => {
                 <Mail className="h-6 w-6 text-yellow-300 mt-1 transition-colors duration-300" />
                 <div>
                   <h3 className="text-xl font-semibold text-yellow-100 mb-2 transition-colors duration-300">{t('contact.email')}</h3>
-                  <p className="text-gray-300">imanimwaisunga@hda.co.tz</p>
+                  <p className="text-gray-300">imanimwaisunga@hda-company.com</p>
                   <p className="text-gray-400 text-sm mt-1">{t('contact.emailDescription')}</p>
                 </div>
               </div>

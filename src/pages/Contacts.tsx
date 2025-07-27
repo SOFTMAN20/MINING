@@ -85,7 +85,7 @@ const Contacts = () => {
                   {
                     icon: Mail,
                     title: "Email",
-                    info: "imanimwaisunga@hda.co.tz",
+                    info: "imanimwaisunga@hda-company.com",
                     description: "We'll respond within 24 hours"
                   },
                   {
@@ -145,7 +145,7 @@ const Contacts = () => {
               <Card className="bg-slate-700 border-yellow-400/30">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
-                  <form className="space-y-6">
+                  <form className="space-y-6" action=""  method="POST">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-gray-300 mb-2">First Name</label>
