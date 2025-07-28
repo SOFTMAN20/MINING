@@ -577,7 +577,7 @@ const Index = () => {
               </div>
               <div className="flex space-x-4">
                 <motion.a
-                  href="https://instagram.com/hdacompany"
+                  href="https://www.instagram.com/hda_companylimited?igsh=MXJkdmEyYThybXlpMA=="
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, y: -2 }}
