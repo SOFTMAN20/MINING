@@ -13,6 +13,7 @@ import Services from "./pages/Services";
 import NotFound from "./pages/NotFound";
 import Products from "./pages/Products";
 import Contacts from "./pages/Contacts";
+import Gallery from "./pages/Gallery";
 import "./i18n/config";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contacts" element={<Contacts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

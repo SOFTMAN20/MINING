@@ -20,27 +20,27 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-16 md:pt-20">
 
       {/* Hero Carousel Section */}
       <HeroCarousel />
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-slate-800">
-        <div className="container mx-auto px-6">
+      <section id="services" className="py-12 md:py-20 bg-slate-800">
+        <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('services.title')}</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-3 md:mb-4">{t('services.title')}</h2>
+            <p className="text-base md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               {t('services.subtitle')}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
             {[
               {
                 image: "/images/blasting).jpeg",
@@ -84,21 +84,22 @@ const Index = () => {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <Card className="bg-slate-700 border-yellow-400/30 border-2 hover:border-yellow-400 hover:border-4 h-full transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30">
-                  <CardContent className="p-6">
-                    <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
-                      />
-                    </div>
-                    <h3 className="text-xl font-bold text-yellow-100 mb-3 transition-colors duration-300">{service.title}</h3>
-                    <p className="text-gray-300 mb-6 text-sm">{service.description}</p>
+                <Card className="bg-slate-700/50 backdrop-blur-sm border-2 border-yellow-400/20 h-full transition-all duration-500 hover:border-yellow-400 hover:shadow-2xl hover:shadow-yellow-400/30 overflow-hidden">
+                  <div className="relative h-56 overflow-hidden bg-slate-800">
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-700 to-transparent z-10 opacity-60"></div>
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                  </div>
+                  <CardContent className="p-4 md:p-6">
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 group-hover:text-yellow-400 transition-colors duration-300">{service.title}</h3>
+                    <p className="text-gray-400 mb-3 md:mb-4 text-sm leading-relaxed">{service.description}</p>
                     <ul className="space-y-2">
                       {service.features.map((feature, i) => (
-                        <li key={i} className="text-gray-300 flex items-center transition-colors duration-300 text-sm">
-                          <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3 transition-colors duration-300"></div>
+                        <li key={i} className="text-gray-300 flex items-center text-sm">
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3 flex-shrink-0"></div>
                           {feature}
                         </li>
                       ))}
@@ -112,21 +113,21 @@ const Index = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 bg-slate-900">
-        <div className="container mx-auto px-6">
+      <section id="products" className="py-12 md:py-20 bg-slate-900">
+        <div className="container mx-auto px-4 md:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4">{t('products.title')}</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-3 md:mb-4">{t('products.title')}</h2>
+            <p className="text-base md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
               {t('products.subtitle')}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { 
                 name: "TRUNKLINE", 
@@ -151,21 +152,27 @@ const Index = () => {
             ].map((product, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-slate-700 p-6 rounded-lg border-yellow-400/30 border-2 hover:border-yellow-400 hover:border-4 transition-all duration-300 shadow-lg shadow-yellow-400/10 hover:shadow-yellow-400/30 group"
+                whileHover={{ y: -8 }}
+                className="group"
               >
-                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
-                  />
-                </div>
-                <h3 className="text-lg font-semibold text-yellow-100 mb-2 transition-colors duration-300">{product.name}</h3>
-                <p className="text-gray-300 text-sm transition-colors duration-300">{product.description}</p>
+                <Card className="bg-slate-700/50 backdrop-blur-sm border-2 border-yellow-400/20 h-full transition-all duration-500 hover:border-yellow-400 hover:shadow-2xl hover:shadow-yellow-400/30 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden bg-slate-800">
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-700 to-transparent z-10 opacity-60"></div>
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    />
+                  </div>
+                  <CardContent className="p-4 md:p-6">
+                    <h3 className="text-base md:text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">{product.name}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{product.description}</p>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
@@ -174,12 +181,12 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center mt-12"
+            className="text-center mt-8 md:mt-12"
           >
             <Button 
               onClick={() => navigate('/products')}
               size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg group transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-slate-900 font-bold px-8 py-4 text-lg group transition-all duration-300 shadow-lg shadow-yellow-500/30 hover:shadow-yellow-500/50 hover:scale-105"
             >
               {t('common.viewAll')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -189,9 +196,14 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-yellow-500 to-red-500 transition-all duration-500 group">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-yellow-500 to-red-500 relative overflow-hidden">
+        {/* Animated background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 text-center">
             {[
               { icon: Users, number: "50+", label: t('stats.expertTeam') },
               { icon: Award, number: "200+", label: t('stats.successfulProjects') },
@@ -200,14 +212,18 @@ const Index = () => {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-slate-900 transition-colors duration-500"
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="text-slate-900"
               >
-                <stat.icon className="h-12 w-12 mx-auto mb-4" />
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-lg font-medium">{stat.label}</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 transition-all duration-300 hover:bg-white/20">
+                  <stat.icon className="h-10 w-10 md:h-14 md:w-14 mx-auto mb-3 md:mb-4 transition-transform duration-300 hover:scale-110" />
+                  <div className="text-3xl md:text-5xl font-bold mb-1 md:mb-2">{stat.number}</div>
+                  <div className="text-sm md:text-lg font-semibold">{stat.label}</div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -215,22 +231,22 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-slate-800">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section id="about" className="py-12 md:py-20 bg-slate-800">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-6">{t('about.title')}</h2>
-              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent mb-4 md:mb-6">{t('about.title')}</h2>
+              <p className="text-base md:text-xl text-gray-300 mb-4 md:mb-6 leading-relaxed">
                 HDA Company Limited is a Tanzanian limited company (Certificate Incorporation Number 143611604) headquartered in Mbeya, Tanzania. We specialize in the importation, distribution, and export of mining explosive products throughout Tanzania and East Africa.
               </p>
-              <p className="text-lg text-gray-400 mb-8">
+              <p className="text-sm md:text-lg text-gray-400 mb-6 md:mb-8">
                 Our mission is to enhance the availability of the best explosive products suitable for all weather conditions, providing assorted types of mining explosives for all types of miners, from small-scale to large-scale operations in East Africa.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 {[
                   "Transparency & Honesty in all our operations",
                   "Reliability in product delivery and quality",
@@ -238,8 +254,8 @@ const Index = () => {
                   "Innovation in explosive solutions",
                   "Accountability to our customers and environment"
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center text-yellow-100 transition-colors duration-300 group">
-                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-4 transition-colors duration-300"></div>
+                  <div key={index} className="flex items-center text-yellow-100 transition-colors duration-300 group text-sm md:text-base">
+                    <div className="w-2 h-2 bg-yellow-300 rounded-full mr-3 md:mr-4 transition-colors duration-300 flex-shrink-0"></div>
                     {item}
                   </div>
                 ))}

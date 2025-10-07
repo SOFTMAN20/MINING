@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const HeroCarousel = () => {
@@ -92,7 +90,7 @@ const HeroCarousel = () => {
   ];
 
   return (
-    <section id="home" className="relative h-screen md:h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-[70vh] sm:h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
       <Carousel
         opts={{
           align: "start",
@@ -127,48 +125,68 @@ const HeroCarousel = () => {
                   style={{ backgroundImage: `url('${slide.background}')` }}
                 ></div>
                 
-                <div className="relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6 flex flex-col justify-center h-full py-20">
+                <div className="relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6 flex flex-col justify-center h-full py-4 pb-16 sm:py-10 md:py-20">
+                  {/* Badge with Icon */}
                   <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
-                    className="mb-4 sm:mb-6"
+                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500/20 to-red-500/20 border border-yellow-500/30 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6 mx-auto"
                   >
-                    {slide.icon && (
-                      <slide.icon className="h-12 w-12 sm:h-16 sm:w-16 text-yellow-400 mx-auto mb-3 sm:mb-4" />
+                    {slide.icon ? (
+                      <slide.icon className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400" />
+                    ) : (
+                      <Target className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400" />
                     )}
+                    <span className="text-yellow-400 font-semibold text-xs sm:text-sm">
+                      {slide.id === 1 ? "Mining Explosives" : slide.id === 2 ? "Professional Services" : slide.id === 3 ? "Premium Products" : "Our Values"}
+                    </span>
                   </motion.div>
                   
                   <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight"
+                    transition={{ duration: 0.8, delay: 0.1 }}
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 sm:mb-4 md:mb-6 leading-tight"
                   >
                     {slide.title}
-                    <span className="text-yellow-400 block">{slide.subtitle}</span>
+                    <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400 bg-clip-text text-transparent block">{slide.subtitle}</span>
                   </motion.h1>
                   
                   <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed px-2 sm:px-0"
                   >
                     {slide.description}
-                    <span className="block text-xs sm:text-sm md:text-base mt-1 sm:mt-2">{slide.tagline}</span>
                   </motion.p>
+                  
+                  {/* Tagline with better styling */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="flex items-center justify-center space-x-2 mb-4 sm:mb-6 text-yellow-300 text-xs sm:text-sm"
+                  >
+                    {slide.tagline.split(' • ').map((tag, i) => (
+                      <span key={i} className="flex items-center">
+                        {i > 0 && <span className="w-1 h-1 bg-yellow-400 rounded-full mx-2"></span>}
+                        {tag}
+                      </span>
+                    ))}
+                  </motion.div>
                   
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
+                    className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center mb-0"
                   >
                     <Button 
                       onClick={slide.primaryButton.action}
                       size="lg" 
-                      className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px]"
+                      className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-4 sm:px-6 md:px-8 py-2.5 sm:py-4 text-xs sm:text-base md:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[40px] sm:min-h-[48px]"
                     >
                       {slide.primaryButton.text}
                       <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
@@ -177,7 +195,7 @@ const HeroCarousel = () => {
                       onClick={slide.secondaryButton.action}
                       size="lg" 
                       variant="outline" 
-                      className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg transition-all duration-300 w-full sm:w-auto min-h-[44px] sm:min-h-[48px] border-2"
+                      className="border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-4 sm:px-6 md:px-8 py-2.5 sm:py-4 text-xs sm:text-base md:text-lg transition-all duration-300 w-full sm:w-auto min-h-[40px] sm:min-h-[48px] border-2"
                     >
                       {slide.secondaryButton.text}
                     </Button>
@@ -219,15 +237,15 @@ const HeroCarousel = () => {
           ))}
         </CarouselContent>
         
-        <CarouselPrevious className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 bg-slate-800/80 border-yellow-400/50 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900 w-8 h-8 sm:w-10 sm:h-10" />
-        <CarouselNext className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 bg-slate-800/80 border-yellow-400/50 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900 w-8 h-8 sm:w-10 sm:h-10" />
+        <CarouselPrevious className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 bg-slate-800/80 backdrop-blur-sm border-yellow-400/50 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900 hover:scale-110 w-8 h-8 sm:w-10 sm:h-10 transition-all duration-300" />
+        <CarouselNext className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 bg-slate-800/80 backdrop-blur-sm border-yellow-400/50 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900 hover:scale-110 w-8 h-8 sm:w-10 sm:h-10 transition-all duration-300" />
         
         {/* Carousel Indicators */}
-        <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
+        <div className="absolute bottom-6 sm:bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-2 bg-slate-900/30 backdrop-blur-sm px-3 py-2 rounded-full">
           {slides.map((_, index) => (
             <div 
               key={index}
-              className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-400/50 hover:bg-yellow-400 transition-colors cursor-pointer"
+              className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-400/50 hover:bg-yellow-400 transition-all duration-300 cursor-pointer hover:scale-125"
             ></div>
           ))}
         </div>
