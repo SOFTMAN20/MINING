@@ -17,7 +17,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm HDA Assistant. How can I help you today? You can ask me about our products, services, or contact information.",
+      text: "Hello! I'm HDA Assistant. How can I help you today?\n\nYou can ask me about:\n• Our products & services\n• Contact information\n• Pricing & quotes\n• Website developer info",
       sender: "bot",
       timestamp: new Date()
     }
@@ -76,13 +76,18 @@ const ChatBot = () => {
       return "Hello! Welcome to HDA Company Limited. I'm here to help you with information about our mining explosive products and services. What would you like to know?";
     }
 
+    // Website Developer / Stalabs AI
+    if (message.includes("website") || message.includes("developer") || message.includes("made this") || message.includes("built this") || message.includes("stalabs") || message.includes("alex") || message.includes("web design")) {
+      return "This website was professionally developed by:\n\n👨‍💻 Alex Mray\n🏢 Stalabs AI\n📞 +255750939217\n\nStalabs AI specializes in:\n• Web Development\n• AI Solutions\n• Custom Software\n• Digital Transformation\n\nWould you like to contact them for your own project?";
+    }
+
     // Thanks
     if (message.includes("thank") || message.includes("thanks")) {
       return "You're welcome! If you have any other questions about our products or services, feel free to ask. You can also contact us directly at +255753392262.";
     }
 
     // Default response
-    return "I can help you with information about:\n\n• Our Products (explosives, detonators, etc.)\n• Services (blasting, consultancy, training)\n• Contact Information\n• Pricing & Quotes\n• Safety & Certifications\n• Company Information\n\nWhat would you like to know?";
+    return "I can help you with information about:\n\n• Our Products (explosives, detonators, etc.)\n• Services (blasting, consultancy, training)\n• Contact Information\n• Pricing & Quotes\n• Safety & Certifications\n• Company Information\n• Website Developer (Stalabs AI)\n\nWhat would you like to know?";
   };
 
   const handleSendMessage = () => {
@@ -188,11 +193,10 @@ const ChatBot = () => {
                       </div>
                       <div>
                         <div
-                          className={`rounded-2xl p-3 ${
-                            message.sender === "user"
-                              ? "bg-gradient-to-r from-yellow-500 to-red-500 text-slate-900"
-                              : "bg-slate-700 text-white"
-                          }`}
+                          className={`rounded-2xl p-3 ${message.sender === "user"
+                            ? "bg-gradient-to-r from-yellow-500 to-red-500 text-slate-900"
+                            : "bg-slate-700 text-white"
+                            }`}
                         >
                           <p className="text-sm whitespace-pre-line">{message.text}</p>
                         </div>
