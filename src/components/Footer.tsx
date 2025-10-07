@@ -68,10 +68,28 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            {t('footer.copyright')}
-          </p>
+        <div className="border-t border-slate-700 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-sm text-center md:text-left">
+              {t('footer.copyright')}
+            </p>
+            
+            {/* Stalabs AI Credit */}
+            <div className="flex items-center gap-2 text-gray-400 text-base md:text-lg">
+              <span>Developed by</span>
+              <a 
+                href="https://wa.me/255750939217" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-semibold text-yellow-400 hover:text-yellow-300 transition-colors flex items-center gap-2 group"
+              >
+                <span className="bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent font-bold text-lg md:text-xl">
+                  Stalabs AI
+                </span>
+                <Phone className="h-4 w-4 md:h-5 md:w-5 text-yellow-400 group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
