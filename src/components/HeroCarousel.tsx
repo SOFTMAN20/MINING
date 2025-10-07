@@ -157,25 +157,11 @@ const HeroCarousel = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed px-2 sm:px-0"
+                    className="text-xs sm:text-base md:text-lg lg:text-xl text-gray-300 mb-3 sm:mb-6 md:mb-8 leading-relaxed px-2 sm:px-0"
                   >
                     {slide.description}
+                    <span className="block text-xs sm:text-sm md:text-base mt-1 sm:mt-2 text-yellow-300">{slide.tagline}</span>
                   </motion.p>
-                  
-                  {/* Tagline with better styling */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                    className="flex items-center justify-center space-x-2 mb-4 sm:mb-6 text-yellow-300 text-xs sm:text-sm"
-                  >
-                    {slide.tagline.split(' • ').map((tag, i) => (
-                      <span key={i} className="flex items-center">
-                        {i > 0 && <span className="w-1 h-1 bg-yellow-400 rounded-full mx-2"></span>}
-                        {tag}
-                      </span>
-                    ))}
-                  </motion.div>
                   
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
