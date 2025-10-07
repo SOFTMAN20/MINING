@@ -84,7 +84,7 @@ const Footer = () => {
                 className="font-semibold text-yellow-400 hover:text-yellow-300 transition-colors flex items-center gap-2 group"
               >
                 <span className="bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent font-bold text-lg md:text-xl">
-                  Stalabs AI
+                  Starlabs AI
                 </span>
                 <Phone className="h-4 w-4 md:h-5 md:w-5 text-yellow-400 group-hover:scale-110 transition-transform" />
               </a>
