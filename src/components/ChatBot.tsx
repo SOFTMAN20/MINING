@@ -56,7 +56,7 @@ const ChatBot = () => {
         newContext = {};
         return { response, newContext };
       } else if (context.lastTopic === "developer") {
-        response = "Excellent! Contact Stalabs AI:\n\n📞 WhatsApp: +255750939217\n👨‍💻 Developer: Alex Mray\n\nThey can help you with web development, AI solutions, and custom software!";
+        response = "Excellent! Contact StarLabs AI:\n\n📞 WhatsApp: +255750939217\n👨‍💻 Developer: Alex Mray\n\nThey can help you with web development, AI solutions, and custom software!";
         newContext = {};
         return { response, newContext };
       }
@@ -147,10 +147,10 @@ const ChatBot = () => {
       return { response, newContext };
     }
 
-    // Pricing
-    if (message.includes("price") || message.includes("cost") || message.includes("quote") || message.includes("how much")) {
-      const productMention = context.productInquiry ? `\n\nProduct: ${context.productInquiry}` : "";
-      response = `For pricing information and custom quotes, please contact our sales team:${productMention}\n\n📞 +255753392262 (WhatsApp)\n📧 imanimwaisunga@hda-company.com\n\nOur team will provide you with competitive pricing based on:\n• Quantity required\n• Delivery location\n• Project specifications\n\nWould you like me to connect you now?`;
+    // Pricing & Quotes
+    if (message.includes("price") || message.includes("pricing") || message.includes("cost") || message.includes("quote") || message.includes("how much") || message.includes("rates")) {
+      const productMention = context.productInquiry ? `\n\n🔸 Product of Interest: ${context.productInquiry}` : "";
+      response = `💰 Get Your Custom Quote${productMention}\n\nOur pricing is competitive and tailored to your needs!\n\n📋 Pricing Factors:\n• Product type and quantity\n• Delivery location\n• Project timeline\n• Technical specifications\n• Volume discounts available\n\n📞 Contact Our Sales Team:\n+255753392262 (WhatsApp - Fast Response!)\n📧 imanimwaisunga@hda-company.com\n\n⚡ Why Choose Us:\n✅ Competitive prices\n✅ Flexible payment terms\n✅ Bulk order discounts\n✅ Free technical consultation\n\nReady to get your quote? Click the phone number above to chat on WhatsApp!`;
       newContext.lastTopic = "contact";
       return { response, newContext };
     }
@@ -176,9 +176,9 @@ const ChatBot = () => {
       return { response, newContext };
     }
 
-    // Website Developer / Stalabs AI
-    if (message.includes("website") || message.includes("developer") || message.includes("made this") || message.includes("built this") || message.includes("stalabs") || message.includes("alex") || message.includes("web design")) {
-      response = "This website was professionally developed by:\n\n�‍�💻 Alex Mray\n🏢 Stalabs AI\n📞 +255750939217\n\nStalabs AI specializes in:\n• Web Development\n• AI Solutions\n• Custom Software\n• Digital Transformation\n\nWould you like to contact them for your own project?";
+    // Website Developer / StarLabs AI
+    if (message.includes("website") || message.includes("developer") || message.includes("made this") || message.includes("built this") || message.includes("starlabs") || message.includes("star labs") || message.includes("alex") || message.includes("web design")) {
+      response = "This website was professionally developed by:\n\n�‍�💻 Alex Mray\n🏢 StarLabs AI\n📞 +255750939217\n\nStarLabs AI specializes in:\n• Web Development\n• AI Solutions\n• Custom Software\n• Digital Transformation\n\nWould you like to contact them for your own project?";
       newContext.lastTopic = "developer";
       return { response, newContext };
     }
@@ -313,7 +313,15 @@ const ChatBot = () => {
                             : "bg-slate-700 text-white"
                             }`}
                         >
-                          <p className="text-sm whitespace-pre-line">{message.text}</p>
+                          <p 
+                            className="text-sm whitespace-pre-line"
+                            dangerouslySetInnerHTML={{
+                              __html: message.text
+                                .replace(/\+255753392262/g, '<a href="https://wa.me/255753392262" target="_blank" rel="noopener noreferrer" class="underline font-bold hover:text-yellow-300 transition-colors">+255753392262</a>')
+                                .replace(/\+255750939217/g, '<a href="https://wa.me/255750939217" target="_blank" rel="noopener noreferrer" class="underline font-bold hover:text-yellow-300 transition-colors">+255750939217</a>')
+                                .replace(/imanimwaisunga@hda-company\.com/g, '<a href="mailto:imanimwaisunga@hda-company.com" class="underline font-bold hover:text-yellow-300 transition-colors">imanimwaisunga@hda-company.com</a>')
+                            }}
+                          />
                         </div>
                         <p className="text-xs text-gray-500 mt-1 px-2">
                           {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}

@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-3 text-yellow-400" />
-                <button 
+                <button
                   onClick={handleWhatsAppClick}
                   className="hover:text-yellow-400 transition-colors"
                 >
@@ -73,18 +73,18 @@ const Footer = () => {
             <p className="text-gray-400 text-sm text-center md:text-left">
               {t('footer.copyright')}
             </p>
-            
-            {/* Stalabs AI Credit */}
+
+            {/* StarLabs AI Credit */}
             <div className="flex items-center gap-2 text-gray-400 text-base md:text-lg">
               <span>Developed by</span>
-              <a 
-                href="https://wa.me/255750939217" 
-                target="_blank" 
+              <a
+                href="https://wa.me/255750939217"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-yellow-400 hover:text-yellow-300 transition-colors flex items-center gap-2 group"
               >
                 <span className="bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent font-bold text-lg md:text-xl">
-                  Starlabs AI
+                  StarLabs AI
                 </span>
                 <Phone className="h-4 w-4 md:h-5 md:w-5 text-yellow-400 group-hover:scale-110 transition-transform" />
               </a>
