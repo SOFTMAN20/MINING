@@ -198,7 +198,7 @@ const ChatBot = () => {
     }
 
     // Default response
-    response = "I can help you with information about:\n\n• 🔸 Our Products (8 types of explosives)\n• 🔹 Services (blasting, consultancy, training)\n• 📞 Contact Information\n• 💰 Pricing & Quotes\n• 🛡️ Safety & Certifications\n• 🏢 Company Information\n• 💻 Website Developer (Stalabs AI)\n\nWhat would you like to know?";
+    response = "I can help you with information about:\n\n• 🔸 Our Products (8 types of explosives)\n• 🔹 Services (blasting, consultancy, training)\n• 📞 Contact Information\n• 💰 Pricing & Quotes\n• 🛡️ Safety & Certifications\n• 🏢 Company Information\n• 💻 Website Developer (StarLabs AI)\n\nWhat would you like to know?";
     newContext = {};
     return { response, newContext };
   };
