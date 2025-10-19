@@ -11,13 +11,13 @@ const About = () => {
       <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95"></div>
         <div className="absolute inset-0 bg-[url('/images/explosives124.jpg')] bg-cover bg-center opacity-30"></div>
-        
+
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -37,7 +37,7 @@ const About = () => {
           >
             About <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400 bg-clip-text text-transparent">HDA Company</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,20 +63,20 @@ const About = () => {
                 About Us
               </h2>
               <p className="text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                HDA Company Limited is a limited company with Certificate Incorporation Number 143611604, 
-                P.O. BOX 1113, Mbeya. The Headquarter is located in Mbeya, Tanzania, and the company is 
+                HDA Company Limited is a limited company with Certificate Incorporation Number 143611604,
+                P.O. BOX 1113, Mbeya. The Headquarter is located in Mbeya, Tanzania, and the company is
                 owned by Tanzanians in the United Republic of Tanzania.
               </p>
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                HDA Company Limited deals with the importation and selling of mining explosive products 
+                HDA Company Limited deals with the importation and selling of mining explosive products
                 in Tanzania and also exports mining explosives outside Tanzania.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                We serve clients across East Africa, providing reliable and safe explosive solutions 
+                We serve clients across East Africa, providing reliable and safe explosive solutions
                 for various mining operations, from small-scale to large-scale miners.
               </p>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -85,9 +85,9 @@ const About = () => {
               className="relative group"
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img 
-                  src="images/exp.jpg" 
-                  alt="HDA Company Operations" 
+                <img
+                  src="images/exp.jpg"
+                  alt="HDA Company Operations"
                   className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/20 to-transparent"></div>
@@ -117,8 +117,8 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    To enhance the availability of the best explosive products, suitable to all weather—rainy or dry—and 
-                    provide assorted types of mining explosives suitable for all types of miners, from small-scale to 
+                    To enhance the availability of the best explosive products, suitable to all weather—rainy or dry—and
+                    provide assorted types of mining explosives suitable for all types of miners, from small-scale to
                     large-scale miners in East Africa.
                   </p>
                 </CardContent>
@@ -141,7 +141,7 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    To be one of the best explosives companies in East Africa by providing competitive and 
+                    To be one of the best explosives companies in East Africa by providing competitive and
                     environmentally friendly products.
                   </p>
                 </CardContent>
@@ -246,8 +246,8 @@ const About = () => {
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
                     <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 p-1">
-                      <img 
-                        src="/lovable-uploads/fd92fd20-6fda-4b9d-8f1d-8d7d46442142.png" 
+                      <img
+                        src="/lovable-uploads/fd92fd20-6fda-4b9d-8f1d-8d7d46442142.png"
                         alt="Imani Mwaisunga - Executive Director"
                         className="w-full h-full rounded-full object-cover"
                       />
@@ -255,7 +255,7 @@ const About = () => {
                     <h3 className="text-2xl font-bold text-yellow-100 mb-2">Imani Mwaisunga</h3>
                     <p className="text-yellow-300 text-lg mb-4">Executive Director</p>
                   </div>
-                  
+
                   <div className="space-y-4 text-left">
                     <div className="flex items-start space-x-3">
                       <GraduationCap className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
@@ -264,7 +264,7 @@ const About = () => {
                         <p className="text-gray-300 text-sm">BSc. Mining Engineering</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start space-x-3">
                       <Briefcase className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
                       <div>
@@ -288,8 +288,8 @@ const About = () => {
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
                     <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-red-500 p-1">
-                      <img 
-                        src="/lovable-uploads/9a793414-de7f-4886-9372-f0a2671146f3.png" 
+                      <img
+                        src="/lovable-uploads/9a793414-de7f-4886-9372-f0a2671146f3.png"
                         alt="Jackline Masangula - Director"
                         className="w-full h-full rounded-full object-cover"
                       />
@@ -297,7 +297,7 @@ const About = () => {
                     <h3 className="text-2xl font-bold text-yellow-100 mb-2">Jackline Masangula</h3>
                     <p className="text-yellow-300 text-lg mb-4">Director</p>
                   </div>
-                  
+
                   <div className="space-y-4 text-left">
                     <div className="flex items-start space-x-3">
                       <GraduationCap className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
@@ -306,7 +306,7 @@ const About = () => {
                         <p className="text-gray-300 text-sm">Bachelor of Arts in Adult Education</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start space-x-3">
                       <Briefcase className="h-5 w-5 text-yellow-300 mt-1 flex-shrink-0" />
                       <div>

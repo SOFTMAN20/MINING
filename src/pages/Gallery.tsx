@@ -66,8 +66,8 @@ const Gallery = () => {
   const categories = ["All", ...Array.from(new Set(galleryImages.map(img => img.category)))];
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredImages = activeCategory === "All" 
-    ? galleryImages 
+  const filteredImages = activeCategory === "All"
+    ? galleryImages
     : galleryImages.filter(img => img.category === activeCategory);
 
   return (
@@ -75,13 +75,13 @@ const Gallery = () => {
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95"></div>
-        
+
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -101,7 +101,7 @@ const Gallery = () => {
           >
             Photo <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400 bg-clip-text text-transparent">Gallery</span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,11 +126,10 @@ const Gallery = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                  activeCategory === category
-                    ? "bg-gradient-to-r from-yellow-500 to-red-500 text-slate-900 shadow-lg shadow-yellow-500/30"
-                    : "bg-slate-700/50 text-gray-300 hover:bg-slate-700 border border-slate-600"
-                }`}
+                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${activeCategory === category
+                  ? "bg-gradient-to-r from-yellow-500 to-red-500 text-slate-900 shadow-lg shadow-yellow-500/30"
+                  : "bg-slate-700/50 text-gray-300 hover:bg-slate-700 border border-slate-600"
+                  }`}
               >
                 {category}
               </button>
@@ -161,7 +160,7 @@ const Gallery = () => {
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                    
+
                     {/* Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="bg-yellow-500/90 backdrop-blur-sm rounded-full p-4">
