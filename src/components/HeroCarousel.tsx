@@ -173,12 +173,12 @@ const HeroCarousel = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className="flex items-center justify-center flex-wrap gap-1.5 sm:gap-3 mb-4 sm:mb-6 md:mb-8 text-yellow-300 text-[11px] sm:text-base px-6 sm:px-8 max-w-full"
+                    className="flex items-center justify-center flex-wrap gap-1.5 sm:gap-3 mb-4 sm:mb-6 md:mb-8 text-yellow-300 text-[11px] sm:text-base px-6 sm:px-5 max-w-full"
                   >
                     {slide.tagline.split(' • ').map((tag, i) => (
-                      <span key={i} className="flex items-center text-center">
-                        {i > 0 && <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mx-1.5 sm:mx-3 flex-shrink-0"></span>}
-                        <span className="break-words">{tag}</span>
+                      <span key={i} className="flex items-center">
+                        {i > 0 && <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mx-1.5 sm:mx-2 flex-shrink-0"></span>}
+                        <span className="break-words sm:whitespace-nowrap">{tag}</span>
                       </span>
                     ))}
                   </motion.div>
@@ -192,16 +192,16 @@ const HeroCarousel = () => {
                     <Button 
                       onClick={slide.primaryButton.action}
                       size="lg" 
-                      className="bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-slate-900 font-bold px-7 sm:px-10 py-3.5 sm:py-5 text-[15px] sm:text-lg md:text-xl group transition-all duration-300 w-full sm:w-auto min-h-[52px] sm:min-h-[56px] shadow-xl shadow-yellow-500/40 hover:shadow-yellow-500/60"
+                      className="bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-slate-900 font-bold px-8 sm:px-12 py-4 sm:py-5 text-[15px] sm:text-lg md:text-xl group transition-all duration-300 w-full sm:w-auto min-h-[54px] sm:min-h-[58px] shadow-xl shadow-yellow-500/40 hover:shadow-yellow-500/60 rounded-2xl"
                     >
                       {slide.primaryButton.text}
-                      <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2.5 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
                     </Button>
                     <Button 
                       onClick={slide.secondaryButton.action}
                       size="lg" 
                       variant="outline" 
-                      className="border-2 border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-7 sm:px-10 py-3.5 sm:py-5 text-[15px] sm:text-lg md:text-xl font-semibold transition-all duration-300 w-full sm:w-auto min-h-[52px] sm:min-h-[56px] hover:scale-[1.02]"
+                      className="border-2 border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-8 sm:px-12 py-4 sm:py-5 text-[15px] sm:text-lg md:text-xl font-semibold transition-all duration-300 w-full sm:w-auto min-h-[54px] sm:min-h-[58px] hover:scale-[1.02] rounded-2xl"
                     >
                       {slide.secondaryButton.text}
                     </Button>
