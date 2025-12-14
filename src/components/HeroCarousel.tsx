@@ -6,10 +6,14 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Autoplay from "embla-carousel-autoplay";
+import { useState, useEffect } from "react";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 const HeroCarousel = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
 
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -17,6 +21,16 @@ const HeroCarousel = () => {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   const slides = [
     {
@@ -92,6 +106,7 @@ const HeroCarousel = () => {
   return (
     <section id="home" className="relative h-screen overflow-hidden">
       <Carousel
+        setApi={setApi}
         opts={{
           align: "start",
           loop: true,
@@ -205,6 +220,27 @@ const HeroCarousel = () => {
                     >
                       {slide.secondaryButton.text}
                     </Button>
+                  </motion.div>
+
+                  {/* Carousel Indicators */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    className="flex items-center justify-center gap-2 mt-4 sm:mt-5"
+                  >
+                    {slides.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => api?.scrollTo(index)}
+                        className={`transition-all duration-300 rounded-full ${
+                          current === index
+                            ? "w-8 sm:w-10 h-2 sm:h-2.5 bg-yellow-400"
+                            : "w-2 sm:w-2.5 h-2 sm:h-2.5 bg-white/40 hover:bg-white/60"
+                        }`}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
                   </motion.div>
                 </div>
 
