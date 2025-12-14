@@ -90,7 +90,7 @@ const HeroCarousel = () => {
   ];
 
   return (
-    <section id="home" className="relative h-screen min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen overflow-hidden">
       <Carousel
         opts={{
           align: "start",
@@ -102,12 +102,12 @@ const HeroCarousel = () => {
             stopOnInteraction: false,
           }),
         ]}
-        className="w-full h-full min-h-screen"
+        className="w-full h-screen"
       >
-        <CarouselContent className="h-full min-h-screen">
+        <CarouselContent className="h-screen">
           {slides.map((slide) => (
-            <CarouselItem key={slide.id} className="h-full min-h-screen">
-              <div className="relative h-full min-h-screen flex items-center justify-center">
+            <CarouselItem key={slide.id} className="h-screen">
+              <div className="relative h-screen flex items-center justify-center">
                 {/* Background Image */}
                 <div 
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
@@ -127,24 +127,24 @@ const HeroCarousel = () => {
                     initial={{ opacity: 0, x: 80, y: -80, scale: 0.8 }}
                     animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
                     transition={{ duration: 1.2, type: "spring", bounce: 0.4 }}
-                    className="hidden sm:block absolute top-6 right-6 w-24 h-24 sm:w-32 sm:h-32 md:w-44 md:h-44 z-30 shadow-xl rounded-lg pointer-events-none"
+                    className="hidden sm:block absolute top-4 right-4 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 z-30 shadow-xl rounded-lg pointer-events-none"
                   />
                 )}
                 
-                <div className="relative z-20 text-center w-full max-w-7xl mx-auto px-5 sm:px-8 md:px-12 flex flex-col justify-center items-center h-full py-6 pb-24 sm:py-12 md:py-20">
+                <div className="relative z-20 text-center w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col justify-center items-center h-full py-4 sm:py-6 md:py-8">
                   {/* Badge with Icon */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
-                    className="inline-flex flex-col items-center justify-center bg-gradient-to-r from-yellow-500/20 to-red-500/20 border border-yellow-500/30 rounded-2xl px-5 py-2.5 sm:px-7 sm:py-3.5 mb-4 sm:mb-5 md:mb-7 gap-1.5 sm:gap-2"
+                    className="inline-flex flex-col items-center justify-center bg-gradient-to-r from-yellow-500/20 to-red-500/20 border border-yellow-500/30 rounded-xl px-4 py-2 sm:px-5 sm:py-2.5 mb-3 sm:mb-3 md:mb-4 gap-1 sm:gap-1.5"
                   >
                     {slide.icon ? (
-                      <slide.icon className="h-6 w-6 sm:h-7 sm:w-7 text-yellow-400" />
+                      <slide.icon className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400" />
                     ) : (
-                      <Target className="h-6 w-6 sm:h-7 sm:w-7 text-yellow-400" />
+                      <Target className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400" />
                     )}
-                    <span className="text-yellow-400 font-semibold text-[11px] sm:text-sm text-center leading-tight">
+                    <span className="text-yellow-400 font-semibold text-[11px] sm:text-xs text-center leading-tight">
                       {slide.id === 1 ? "Mining Explosives" : slide.id === 2 ? "Professional Services" : slide.id === 3 ? "Premium Products" : "Our Values"}
                     </span>
                   </motion.div>
@@ -153,17 +153,17 @@ const HeroCarousel = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1 }}
-                    className="text-[24px] leading-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-2 sm:mb-4 md:mb-5 px-3"
+                    className="text-[24px] leading-[1.3] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-2 sm:mb-3 md:mb-4 px-3"
                   >
                     {slide.title}
-                    <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400 bg-clip-text text-transparent block mt-1.5 sm:mt-3">{slide.subtitle}</span>
+                    <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400 bg-clip-text text-transparent block mt-1 sm:mt-2">{slide.subtitle}</span>
                   </motion.h1>
                   
                   <motion.p
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-[13px] sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-3 sm:mb-5 md:mb-7 leading-relaxed px-3 sm:px-6 max-w-4xl mx-auto"
+                    className="text-[13px] sm:text-base md:text-lg lg:text-xl text-gray-200 mb-3 sm:mb-3 md:mb-4 leading-[1.6] sm:leading-relaxed px-3 sm:px-6 max-w-4xl mx-auto"
                   >
                     {slide.description}
                   </motion.p>
@@ -173,11 +173,11 @@ const HeroCarousel = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className="flex items-center justify-center flex-wrap gap-1.5 sm:gap-3 mb-4 sm:mb-6 md:mb-8 text-yellow-300 text-[11px] sm:text-base px-6 sm:px-5 max-w-full"
+                    className="flex items-center justify-center flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-4 md:mb-5 text-yellow-300 text-[11px] sm:text-sm px-3 sm:px-5 max-w-full"
                   >
                     {slide.tagline.split(' • ').map((tag, i) => (
                       <span key={i} className="flex items-center">
-                        {i > 0 && <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mx-1.5 sm:mx-2 flex-shrink-0"></span>}
+                        {i > 0 && <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-yellow-400 rounded-full mx-1 sm:mx-1.5 flex-shrink-0"></span>}
                         <span className="break-words sm:whitespace-nowrap">{tag}</span>
                       </span>
                     ))}
@@ -187,21 +187,21 @@ const HeroCarousel = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center px-5 sm:px-0 w-full max-w-xl sm:max-w-none"
+                    className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 justify-center px-4 sm:px-0 w-full max-w-xl sm:max-w-none"
                   >
                     <Button 
                       onClick={slide.primaryButton.action}
                       size="lg" 
-                      className="bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-slate-900 font-bold px-8 sm:px-12 py-4 sm:py-5 text-[15px] sm:text-lg md:text-xl group transition-all duration-300 w-full sm:w-auto min-h-[54px] sm:min-h-[58px] shadow-xl shadow-yellow-500/40 hover:shadow-yellow-500/60 rounded-2xl"
+                      className="bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 text-slate-900 font-bold px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-[14px] sm:text-base md:text-lg group transition-all duration-300 w-full sm:w-auto min-h-[48px] sm:min-h-[52px] shadow-xl shadow-yellow-500/40 hover:shadow-yellow-500/60 rounded-xl"
                     >
                       {slide.primaryButton.text}
-                      <ArrowRight className="ml-2.5 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                     <Button 
                       onClick={slide.secondaryButton.action}
                       size="lg" 
                       variant="outline" 
-                      className="border-2 border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-8 sm:px-12 py-4 sm:py-5 text-[15px] sm:text-lg md:text-xl font-semibold transition-all duration-300 w-full sm:w-auto min-h-[54px] sm:min-h-[58px] hover:scale-[1.02] rounded-2xl"
+                      className="border-2 border-yellow-400 hover:bg-yellow-400 text-yellow-400 hover:text-slate-900 px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-[14px] sm:text-base md:text-lg font-semibold transition-all duration-300 w-full sm:w-auto min-h-[48px] sm:min-h-[52px] hover:scale-[1.02] rounded-xl"
                     >
                       {slide.secondaryButton.text}
                     </Button>
@@ -245,20 +245,6 @@ const HeroCarousel = () => {
         
         <CarouselPrevious className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 bg-slate-800/90 backdrop-blur-sm border-yellow-400/50 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900 hover:scale-110 w-11 h-11 sm:w-12 sm:h-12 transition-all duration-300 shadow-lg" />
         <CarouselNext className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 bg-slate-800/90 backdrop-blur-sm border-yellow-400/50 text-yellow-400 hover:bg-yellow-400 hover:text-slate-900 hover:scale-110 w-11 h-11 sm:w-12 sm:h-12 transition-all duration-300 shadow-lg" />
-        
-        {/* Carousel Indicators - Dots */}
-        <div 
-          className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex space-x-2.5 sm:space-x-3 bg-slate-900/60 backdrop-blur-md px-4 sm:px-5 py-2.5 sm:py-3 rounded-full shadow-2xl border border-yellow-400/30"
-          style={{ zIndex: 50 }}
-        >
-          {slides.map((_, idx) => (
-            <div 
-              key={idx}
-              className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-yellow-400 hover:bg-yellow-300 transition-all duration-300 cursor-pointer hover:scale-125 shadow-lg"
-              style={{ opacity: 0.8 }}
-            ></div>
-          ))}
-        </div>
       </Carousel>
     </section>
   );
