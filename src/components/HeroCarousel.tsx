@@ -35,7 +35,7 @@ const HeroCarousel = () => {
   const slides = [
     {
       id: 1,
-      background: "images/newimagesteam44.jpeg",
+      background: "images/newimages/team44.jpeg",
       title: t('hero.title'),
       subtitle: t('hero.subtitle'),
       description: t('hero.description'),
