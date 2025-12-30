@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import { X, ZoomIn, Image as ImageIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [currentBgIndex, setCurrentBgIndex] = useState(0);
 
   const galleryImages = [
     {
@@ -21,8 +22,8 @@ const Gallery = () => {
     },
     {
       id: 3,
-      src: "/images/products.png",
-      title: "Product Range",
+      src: "/images/newimages/products/pro48.jpeg",
+      title: "Product",
       category: "Products"
     },
     {
@@ -112,8 +113,90 @@ const Gallery = () => {
     { id: 57, src: "/images/newimages/team53.jpeg", title: "Team Member", category: "Team" },
     { id: 58, src: "/images/newimages/team56.jpeg", title: "Engineering Team", category: "Team" },
     { id: 59, src: "/images/newimages/team57.jpeg", title: "Team Member", category: "Team" },
-    { id: 60, src: "/images/newimages/team59.jpeg", title: "Engineering Team", category: "Team" }
+    { id: 60, src: "/images/newimages/team59.jpeg", title: "Engineering Team", category: "Team" },
+    // Product images from newimages/products folder
+    { id: 61, src: "/images/newimages/products/poduct 1.jpeg", title: "Product", category: "Products" },
+    { id: 62, src: "/images/newimages/products/pro2.jpeg", title: "Product", category: "Products" },
+    { id: 63, src: "/images/newimages/products/pro3.jpeg", title: "Product", category: "Products" },
+    { id: 64, src: "/images/newimages/products/pro4.jpeg", title: "Product", category: "Products" },
+    { id: 65, src: "/images/newimages/products/pro5.jpeg", title: "Product", category: "Products" },
+    { id: 66, src: "/images/newimages/products/pro6.jpeg", title: "Product", category: "Products" },
+    { id: 67, src: "/images/newimages/products/pro7.jpeg", title: "Product", category: "Products" },
+    { id: 68, src: "/images/newimages/products/pro8.jpeg", title: "Product", category: "Products" },
+    { id: 69, src: "/images/newimages/products/pro9.jpeg", title: "Product", category: "Products" },
+    { id: 70, src: "/images/newimages/products/pro10.jpeg", title: "Product", category: "Products" },
+    { id: 71, src: "/images/newimages/products/pro11.jpeg", title: "Product", category: "Products" },
+    { id: 72, src: "/images/newimages/products/pro12.jpeg", title: "Product", category: "Products" },
+    { id: 73, src: "/images/newimages/products/pro13.jpeg", title: "Product", category: "Products" },
+    { id: 74, src: "/images/newimages/products/pro14.jpeg", title: "Product", category: "Products" },
+    { id: 75, src: "/images/newimages/products/pro15.jpeg", title: "Product", category: "Products" },
+    { id: 76, src: "/images/newimages/products/pro16.jpeg", title: "Product", category: "Products" },
+    { id: 77, src: "/images/newimages/products/pro17.jpeg", title: "Product", category: "Products" },
+    { id: 78, src: "/images/newimages/products/pro18.jpeg", title: "Product", category: "Products" },
+    { id: 79, src: "/images/newimages/products/pro20.jpeg", title: "Product", category: "Products" },
+    { id: 80, src: "/images/newimages/products/pro22.jpeg", title: "Product", category: "Products" },
+    { id: 81, src: "/images/newimages/products/pro23.jpeg", title: "Product", category: "Products" },
+    { id: 82, src: "/images/newimages/products/pro24.jpeg", title: "Product", category: "Products" },
+    { id: 83, src: "/images/newimages/products/pro25.jpeg", title: "Product", category: "Products" },
+    { id: 84, src: "/images/newimages/products/pro26.jpeg", title: "Product", category: "Products" },
+    { id: 85, src: "/images/newimages/products/pro27.jpeg", title: "Product", category: "Products" },
+    { id: 86, src: "/images/newimages/products/pro29.jpeg", title: "Product", category: "Products" },
+    { id: 87, src: "/images/newimages/products/pro30.jpeg", title: "Product", category: "Products" },
+    { id: 88, src: "/images/newimages/products/pro31.jpeg", title: "Product", category: "Products" },
+    { id: 89, src: "/images/newimages/products/pro32.jpeg", title: "Product", category: "Products" },
+    { id: 90, src: "/images/newimages/products/pro33.jpeg", title: "Product", category: "Products" },
+    { id: 91, src: "/images/newimages/products/pro34.jpeg", title: "Product", category: "Products" },
+    { id: 92, src: "/images/newimages/products/pro35.jpeg", title: "Product", category: "Products" },
+    { id: 93, src: "/images/newimages/products/pro36.jpeg", title: "Product", category: "Products" },
+    { id: 94, src: "/images/newimages/products/pro37.jpeg", title: "Product", category: "Products" },
+    { id: 95, src: "/images/newimages/products/pro38.jpeg", title: "Product", category: "Products" },
+    { id: 96, src: "/images/newimages/products/pro39.jpeg", title: "Product", category: "Products" },
+    { id: 97, src: "/images/newimages/products/pro40.jpeg", title: "Product", category: "Products" },
+    { id: 98, src: "/images/newimages/products/pro41.jpeg", title: "Product", category: "Products" },
+    { id: 99, src: "/images/newimages/products/pro42.jpeg", title: "Product", category: "Products" },
+    { id: 100, src: "/images/newimages/products/pro43.jpeg", title: "Product", category: "Products" },
+    { id: 101, src: "/images/newimages/products/pro44.jpeg", title: "Product", category: "Products" },
+    { id: 102, src: "/images/newimages/products/pro45.jpeg", title: "Product", category: "Products" },
+    { id: 103, src: "/images/newimages/products/pro46.jpeg", title: "Product", category: "Products" },
+    { id: 104, src: "/images/newimages/products/pro47.jpeg", title: "Product", category: "Products" },
+
+    { id: 106, src: "/images/newimages/products/pro49.jpeg", title: "Product", category: "Products" },
+    { id: 107, src: "/images/newimages/products/pro50.jpeg", title: "Product", category: "Products" },
+    { id: 108, src: "/images/newimages/products/pro51.jpeg", title: "Product", category: "Products" }
   ];
+
+  // Auto-rotate background images from gallery - mix of operations, team, and products
+  const heroBackgrounds = [
+    galleryImages[0].src,  // Blasting Operations
+    galleryImages[1].src,  // Team 44
+    galleryImages[2].src,  // Product
+    galleryImages[9].src,  // Team 1
+    galleryImages[60].src, // Product - poduct 1
+    galleryImages[12].src, // Team 4
+    galleryImages[65].src, // Product - pro5
+    galleryImages[14].src, // Team 6
+    galleryImages[70].src, // Product - pro10
+    galleryImages[20].src, // Team 12
+    galleryImages[75].src, // Product - pro15
+    galleryImages[25].src, // Team 18
+    galleryImages[80].src, // Product - pro22
+    galleryImages[30].src, // Team 24
+    galleryImages[85].src, // Product - pro27
+    galleryImages[35].src, // Team 29
+    galleryImages[90].src, // Product - pro33
+    galleryImages[40].src, // Team 34
+    galleryImages[95].src, // Product - pro38
+    galleryImages[45].src, // Team 39
+    galleryImages[100].src, // Product - pro43
+  ];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBgIndex((prev) => (prev + 1) % heroBackgrounds.length);
+    }, 4000); // Change every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [heroBackgrounds.length]);
 
   const categories = ["All", ...Array.from(new Set(galleryImages.map(img => img.category)))];
   const [activeCategory, setActiveCategory] = useState("All");
@@ -124,12 +207,35 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-16 md:pt-20">
-      {/* Hero Section */}
+      {/* Hero Section with Sliding Background */}
       <section className="relative py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95"></div>
+        {/* Sliding Background Images */}
+        <div className="absolute inset-0">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentBgIndex}
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "-100%", opacity: 0 }}
+              transition={{ 
+                duration: 1.2, 
+                ease: [0.43, 0.13, 0.23, 0.96] // Custom easing for smooth slide
+              }}
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url('${heroBackgrounds[currentBgIndex]}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'top center',
+              }}
+            />
+          </AnimatePresence>
+        </div>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/85 to-slate-900/90 z-[1]"></div>
 
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-[2]">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
