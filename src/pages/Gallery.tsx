@@ -108,11 +108,11 @@ const Gallery = () => {
     { id: 53, src: "/images/newimages/team49.jpeg", title: "Engineering Team", category: "Team" },
     { id: 54, src: "/images/newimages/team50.jpeg", title: "Engineering Team", category: "Team" },
     { id: 55, src: "/images/newimages/team51.jpeg", title: "Engineering Team", category: "Team" },
-    { id: 56, src: "/images/newimages/team52.jpeg", title: "Engineering Team", category: "Team" },
+    { id: 56, src: "/images/newimages/team52.jpeg", title: "Team Member", category: "Team" },
     { id: 57, src: "/images/newimages/team53.jpeg", title: "Team Member", category: "Team" },
-    { id: 58, src: "/images/newimages/team56.jpeg", title: "Team Member", category: "Team" },
+    { id: 58, src: "/images/newimages/team56.jpeg", title: "Engineering Team", category: "Team" },
     { id: 59, src: "/images/newimages/team57.jpeg", title: "Team Member", category: "Team" },
-    { id: 60, src: "/images/newimages/team59.jpeg", title: "Team Member", category: "Team" }
+    { id: 60, src: "/images/newimages/team59.jpeg", title: "Engineering Team", category: "Team" }
   ];
 
   const categories = ["All", ...Array.from(new Set(galleryImages.map(img => img.category)))];
