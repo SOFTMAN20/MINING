@@ -62,12 +62,12 @@ const Gallery = () => {
       category: "Products"
     },
     // Team images from newimages folder
-    { id: 10, src: "/images/newimages/team1.jpeg", title: "Team Member", category: "Team" },
+    { id: 10, src: "/images/newimages/team1.jpeg", title: "Engineering Team", category: "Team" },
     { id: 11, src: "/images/newimages/team2.jpeg", title: "Team Member", category: "Team" },
     { id: 12, src: "/images/newimages/team3.jpeg", title: "Team Member", category: "Team" },
-    { id: 13, src: "/images/newimages/team4.jpeg", title: "Team Member", category: "Team" },
-    { id: 14, src: "/images/newimages/team5.jpeg", title: "Team Member", category: "Team" },
-    { id: 15, src: "/images/newimages/team6.jpeg", title: "Team Member", category: "Team" },
+    { id: 13, src: "/images/newimages/team4.jpeg", title: "Engineering Team", category: "Team" },
+    { id: 14, src: "/images/newimages/team5.jpeg", title: "Engineering Team", category: "Team" },
+    { id: 15, src: "/images/newimages/team6.jpeg", title: "Engineering Team", category: "Team" },
     { id: 16, src: "/images/newimages/team7.jpeg", title: "Team Member", category: "Team" },
     { id: 17, src: "/images/newimages/team8.jpeg", title: "Team Member", category: "Team" },
     { id: 18, src: "/images/newimages/team10.jpeg", title: "Team Member", category: "Team" },
