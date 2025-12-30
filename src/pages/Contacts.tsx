@@ -18,27 +18,43 @@ const Contacts = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-16 md:pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 to-slate-800/85"></div>
-        <div className="absolute inset-0 bg-[url('/images/newimages/team44.jpeg')] bg-cover bg-center"></div>
+      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95"></div>
+        <div className="absolute inset-0 bg-[url('/images/newimages/team44.jpeg')] bg-cover bg-center opacity-30"></div>
         
-        <div className="relative z-10 container mx-auto px-6 text-center">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-500/20 to-red-500/20 border border-yellow-500/30 rounded-full px-6 py-2 mb-8"
+          >
+            <Phone className="h-4 w-4 text-yellow-400" />
+            <span className="text-yellow-400 font-semibold text-sm">Get In Touch</span>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6"
           >
-            Contact <span className="text-yellow-400">Us</span>
+            Contact <span className="bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400 bg-clip-text text-transparent">Us</span>
           </motion.h1>
           
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             Get in touch with our experts for all your mining explosive solutions needs
           </motion.p>
@@ -46,7 +62,7 @@ const Contacts = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-slate-800">
+      <section className="py-12 md:py-20 bg-slate-800">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
