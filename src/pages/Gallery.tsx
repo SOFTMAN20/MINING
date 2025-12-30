@@ -15,7 +15,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      src: "/images/contactsengineer.jpg",
+      src: "/images/newimages/team44.jpeg",
       title: "Engineering Team",
       category: "Team"
     },
