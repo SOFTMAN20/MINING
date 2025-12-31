@@ -162,7 +162,27 @@ const Gallery = () => {
 
     { id: 106, src: "/images/newimages/products/pro49.jpeg", title: "Product", category: "Products" },
     { id: 107, src: "/images/newimages/products/pro50.jpeg", title: "Product", category: "Products" },
-    { id: 108, src: "/images/newimages/products/pro51.jpeg", title: "Product", category: "Products" }
+    { id: 108, src: "/images/newimages/products/pro51.jpeg", title: "Product", category: "Products" },
+    // Operations images from operation and products folder
+    { id: 109, src: "/images/operation and products/op0.jpeg", title: "Operations", category: "Operations" },
+    { id: 110, src: "/images/operation and products/op1.jpeg", title: "Operations", category: "Operations" },
+    { id: 111, src: "/images/operation and products/op2.jpeg", title: "Operations", category: "Operations" },
+    { id: 112, src: "/images/operation and products/op3.jpeg", title: "Operations", category: "Operations" },
+    { id: 113, src: "/images/operation and products/op5.jpeg", title: "Operations", category: "Operations" },
+    { id: 114, src: "/images/operation and products/op8.jpeg", title: "Operations", category: "Operations" },
+    { id: 115, src: "/images/operation and products/op10.jpeg", title: "Operations", category: "Operations" },
+    { id: 116, src: "/images/operation and products/op59.jpeg", title: "Operations", category: "Operations" },
+    { id: 117, src: "/images/operation and products/op90.jpeg", title: "Operations", category: "Operations" },
+    // Products images from operation and products folder
+    { id: 118, src: "/images/operation and products/pro.jpeg", title: "Product", category: "Products" },
+    { id: 119, src: "/images/operation and products/pro1.jpeg", title: "Product", category: "Products" },
+    { id: 120, src: "/images/operation and products/pro2.jpeg", title: "Product", category: "Products" },
+    { id: 121, src: "/images/operation and products/pro3.jpeg", title: "Product", category: "Products" },
+    { id: 122, src: "/images/operation and products/pro5.jpeg", title: "Product", category: "Products" },
+    { id: 123, src: "/images/operation and products/pro6.jpeg", title: "Product", category: "Products" },
+    { id: 124, src: "/images/operation and products/pro9.jpeg", title: "Product", category: "Products" },
+    { id: 125, src: "/images/operation and products/pro10.jpeg", title: "Product", category: "Products" },
+    { id: 126, src: "/images/operation and products/pro69.jpeg", title: "Product", category: "Products" }
   ];
 
   // Auto-rotate background images from gallery - mix of operations, team, and products

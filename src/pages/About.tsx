@@ -86,7 +86,7 @@ const About = () => {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
-                  src="images/exp.jpg"
+                  src="images/operation and products/op2.jpeg"
                   alt="HDA Company Operations"
                   className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                 />
